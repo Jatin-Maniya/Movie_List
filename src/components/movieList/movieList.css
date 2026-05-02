@@ -1,0 +1,37 @@
+.movie__list{
+    padding: 0 3rem 3rem 3rem;
+    box-sizing: border-box;
+}
+
+.list__title{
+    font-size: 1.75rem;
+    margin: 2.5rem;
+}
+
+@media (max-width: 640px) {
+    .movie__list{
+        padding: 0 1rem 2rem 1rem;
+    }
+
+    .list__title{
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+    }
+}
+
+.list__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .movie__list {
+        padding: 0 1rem 2rem 1rem;
+    }
+
+    .list__title {
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+    }
+}

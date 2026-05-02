@@ -1,0 +1,25 @@
+.searchPage {
+    padding: 1.5rem 2.5rem;
+}
+
+.searchTitle {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.searchMessage {
+    color: #cccccc;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.searchMessage.error {
+    color: #ff6b6b;
+}
+
+.searchResults {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
