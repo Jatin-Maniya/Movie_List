@@ -20,7 +20,7 @@ const Header = () => {
     return(
         <div className="header">
             <div className="headerLeft">
-                <Link to="/"> <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" className="header__icon" /> </Link>
+                <Link to="/"> <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" className="header__icon" alt="IMDb logo" /> </Link>
                 <Link to="/movies/popular" style={{textDecoration:"none"}}> <span>Popular</span> </Link>
                 <Link to="/movies/top_rated" style={{textDecoration:"none"}}> <span>Top Rated</span> </Link>
                 <Link to="/movies/upcoming" style={{textDecoration:"none"}}> <span>Upcoming</span> </Link>

@@ -22,7 +22,7 @@ const Cards = ({movie}) => {
         :
         <Link to={`/movie/${movie.id}`} style={{textDecoration:"none",color:"white"}}>
             <div className="cards">
-                <img className="cards__img" src={`https://image.tmdb.org/t/p/original${movie ? movie.poster_path:""}`} />
+                <img className="cards__img" src={`https://image.tmdb.org/t/p/original${movie ? movie.poster_path:""}`} alt={movie ? `${movie.original_title} poster` : "Movie poster"} />
                 <div className="cards__overlay">
                     <div className="card__title">{movie ? movie.original_title : ""}</div>
                     <div className="card__runtime">

@@ -20,12 +20,12 @@ const Movie = () => {
     return(
         <div className="movie">
             <div className="movie__intro">
-                <img src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path:""}`} className="movie__backdrop" />
+                <img src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path:""}`} className="movie__backdrop" alt={currentMovieDetail ? `${currentMovieDetail.original_title} backdrop` : "Movie backdrop"} />
             </div>
             <div className="movie__detail">
                 <div className="movie__detailLeft">
                     <div className="movie__posterBox">
-                        <img className="movie__poster" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path : ""}`} />
+                        <img className="movie__poster" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.poster_path : ""}`} alt={currentMovieDetail ? `${currentMovieDetail.original_title} poster` : "Movie poster"} />
                     </div>
                 </div>
                 <div className="movie__detailRight">
@@ -42,9 +42,8 @@ const Movie = () => {
                             {
                                 currentMovieDetail && currentMovieDetail.genres 
                                 ?
-                                currentMovieDetail.genres.map(genre => (
-                                    <><span className="movie__genre" id={genre.id}>{genre.name}</span></>
-
+                                        currentMovieDetail.genres.map(genre => (
+                                    <span key={genre.id} className="movie__genre">{genre.name}</span>
                                 ))
                                 :
                                 ""
@@ -72,16 +71,12 @@ const Movie = () => {
             <div className="movie__production">
                 {
                     currentMovieDetail && currentMovieDetail.production_companies && currentMovieDetail.production_companies.map(company => (
-                        <>
-                        {
-                            company.logo_path
-                            &&
-                            <span className="productionCompanyImage">
-                                <img className="movie__productionCompany" src={"https://image.tmdb.org/t/p/original" + company.logo_path} />
+                        company.logo_path && (
+                            <span key={company.id} className="productionCompanyImage">
+                                <img className="movie__productionCompany" src={"https://image.tmdb.org/t/p/original" + company.logo_path} alt={`${company.name} logo`} />
                                 <span>{company.name}</span>
                             </span>
-                        }
-                        </>
+                        )
                     ))
                 }
             </div>
